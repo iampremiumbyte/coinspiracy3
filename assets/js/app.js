@@ -56,9 +56,9 @@ page1Btn.addEventListener("click", () => {
 const styleBoxes = () => {
 
     Array(5).fill(0).forEach((_, i) => {
-        const area = document.getElementById(`area${i + 1}`);
+        const area = document.querySelectorAll("area")[i];
         if (area) {
-            const box = document.getElementById(`box${i + 1}`);
+            const box = document.querySelectorAll(".box")[i];
             const coords = area.coords.split(",");
             box.style.width = (Math.abs(coords[0] - coords[2])) + "px"
             box.style.height = (Math.abs(coords[1] - coords[3])) + "px"
@@ -69,10 +69,10 @@ const styleBoxes = () => {
 
 }
 
-$(document).ready(function (e) {
-    styleBoxes();
-});
+// $(document).ready(function (e) {
+//     styleBoxes();
+// });
 
-setInterval(() => {
-    styleBoxes();
-}, 700)
+// setInterval(() => {
+//     styleBoxes();
+// }, 700)

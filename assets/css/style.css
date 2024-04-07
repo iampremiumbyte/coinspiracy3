@@ -20,6 +20,11 @@ body {
     overflow: hidden;
 }
 
+.text-green {
+    color: orange !important;
+    font-weight: bold;
+}
+
 .page-wrap {
     width: 100dvw;
     height: 100dvh;
@@ -186,7 +191,8 @@ body {
     }
 }
 
-.overlay video {
+.overlay video,
+.overlay2 video {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -231,6 +237,18 @@ img {
     display: none;
 }
 
+.instruction {
+    position: absolute;
+    top: 1em;
+    left: 2em;
+    color: #fff;
+    animation-name: blink;
+    animation-duration: .4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    font-size: 1em;
+}
+
 @media screen and (max-width: 420px) {
     .overlay3 {
         display: flex;
@@ -266,5 +284,9 @@ img {
 
     .desktop {
         display: none;
+    }
+
+    .instruction {
+        font-size: .7em !important;
     }
 }

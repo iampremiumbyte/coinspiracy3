@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2B2F38;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.page-wrap {
+    width: 100dvw;
+    height: 100dvh;
+    position: relative;
+}
+
+.code {
+    position: absolute;
+    bottom: 23%;
+    right: 27%;
+    width: 27%;
+    height: 7%;
+    z-index: 1000;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 2em;
+    font-family: bold;
+    text-transform: uppercase;
+    color: #000 !important;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1.2em;
+}
+
+.shake {
+    animation-name: shake;
+    animation-iteration-count: infinite;
+    animation-duration: .03s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+.enterBtn {
+    position: absolute;
+    bottom: 7%;
+    background-color: rgb(30, 29, 37);
+    right: 30%;
+    width: 27%;
+    color: #fff;
+    font-size: 1.5em;
+    padding: .5em;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    z-index: 1000;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-wrap .logo {
+    animation-name: grow;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: .5s;
+    transform: scale(.8);
+    animation-direction: alternate;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 10000;
+    background-color: #000;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 10000;
+    background-color: #000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.overlay3 .logo {
+    width: 10em;
+    height: auto;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+    transform: rotate(-90deg);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(-90deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.overlay video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+@keyframes grow {
+    from {
+        transform: scale(.8);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.overlay img {
+    width: 10em;
+    height: auto;
+}
+
+#page3Btn {
+    cursor: pointer;
+}
+
+@keyframes shake {
+    from {
+        transform: rotate(1deg);
+    }
+
+    to {
+        transform: rotate(-1deg);
+    }
+}
+
+img {
+    height: 100vh;
+    width: 100vw;
+}
+
+.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 420px) {
+    .overlay3 {
+        display: flex;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .code {
+        bottom: 15%;
+        font-size: 1.2em;
+        color: #000 !important;
+        letter-spacing: 1.3em;
+    }
+
+    .enterBtn {
+        position: absolute;
+        bottom: 2%;
+        padding: .3em;
+        font-size: 1em;
+        background-color: rgb(30, 29, 37);
+        right: 30%;
+        width: 27%;
+    }
+
+    img {
+        height: 100vh;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+}

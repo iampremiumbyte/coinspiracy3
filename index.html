@@ -11,6 +11,9 @@
     />
     <title>$Coinspiracy</title>
   </head>
+
+  <div class="box" id="box1"></div>
+
   <body class="">
     <!-- intro overlay -->
     <div class="overlay" id="overlay">
@@ -27,6 +30,7 @@
           id="logo"
           alt=""
         />
+        <p>Click to start</p>
       </div>
     </div>
 
@@ -43,7 +47,12 @@
     <!-- intro overlay -->
     <div class="overlay3" id="overlay3">
       <img class="logo" src="/assets/PAGE 1/logotriangle.png" alt="" />
-      <p>Rotate your screen</p>
+      <br />
+      <br />
+      <br />
+      <p style="text-transform: uppercase; font-weight: bold">
+        Rotate your screen
+      </p>
     </div>
 
     <a href="https://t.me/dukwuonsolcoin">
@@ -65,7 +74,7 @@
     <!-- PAGE 1 -->
     <map name="image-map-1">
       <area
-        id="page1Btn"
+        id="area11"
         target=""
         alt=""
         title=""
@@ -121,6 +130,14 @@
         coords="425,157,805,739"
         shape="rect"
       />
+      <area
+        target=""
+        alt=""
+        title=""
+        href="#page3"
+        coords="1561,941,1890,1078"
+        shape="rect"
+      />
     </map>
 
     <audio
@@ -139,6 +156,11 @@
     <script>
       $(document).ready(function (e) {
         $("img[usemap]").rwdImageMaps();
+      });
+      window.addEventListener("resize", function (event) {
+        $(document).ready(function (e) {
+          $("img[usemap]").rwdImageMaps();
+        });
       });
     </script>
     <script src="/assets/js/app.js"></script>

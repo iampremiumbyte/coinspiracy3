@@ -2,15 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: custom, sans-serif;
+}
+
+
+@font-face {
+    font-family: 'custom';
+    /* Provide a name for your font */
+    src: url('/assets/fonts/Simpsonfont\ DEMO.otf') format('opentype')
 }
 
 body {
     overflow-x: hidden;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #0b0c0e;
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .page-wrap {
@@ -18,6 +25,34 @@ body {
     height: 100dvh;
     position: relative;
 }
+
+.box {
+    position: absolute;
+    border: 3px solid rgba(255, 255, 255, 0.169);
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    z-index: 10;
+    opacity: .7;
+    border-radius: 10px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+@keyframes blink {
+    from {
+        opacity: .7;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0.4;
+        transform: scale(1.1);
+    }
+}
+
 
 .code {
     position: absolute;
@@ -33,7 +68,6 @@ body {
     font-family: bold;
     text-transform: uppercase;
     color: #000 !important;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 1.2em;
 }
 
@@ -59,7 +93,6 @@ body {
     border: none;
     text-transform: uppercase;
     font-weight: bold;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: lighter;
     cursor: pointer;
 }
@@ -74,6 +107,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #fff;
+}
+
+.overlay p {
+    margin-top: 2em;
 }
 
 .logo-wrap {
@@ -123,6 +161,8 @@ body {
     justify-content: center;
     align-items: center;
     display: none;
+    color: #fff;
+    font-weight: lighter;
 }
 
 .overlay3 .logo {

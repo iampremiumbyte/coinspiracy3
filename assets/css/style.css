@@ -108,7 +108,7 @@ body {
     height: 100%;
     z-index: 1000;
     background-color: #000;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -229,7 +229,7 @@ body {
 }
 
 img {
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
 }
 
@@ -274,9 +274,6 @@ img {
         width: 27%;
     }
 
-    img {
-        height: 100vh;
-    }
 
     .mobile {
         display: block;

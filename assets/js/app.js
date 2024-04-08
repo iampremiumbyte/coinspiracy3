@@ -29,26 +29,30 @@ page3Btn.addEventListener("click", () => {
     // play video
     overlay2.style.display = "flex";
     outroVideo.play();
-    window.location.href = "#page4";
+    const windowHeight = window.innerHeight;
+    window.scrollTo(0, windowHeight * 4);
 });
 
 enterBtn.addEventListener("click", async () => {
     const code = document.querySelector("#code");
     if (code.value !== "666666") {
-        window.location.href = "#page1";
+        const page1 = document.querySelector("#page1");
+        window.scrollTo(0, page1.scrollHeight);
         await bgAudio.stop();
         await bgAudio.play();
         return;
     }
-    window.location.href = "#page3";
+    const windowHeight = window.innerHeight;
+    window.scrollTo(0, windowHeight * 2);
 });
 
 
 page1Btn.addEventListener("click", () => {
     document.body.classList.add("shake");
     setTimeout(() => {
-        window.location.href = "#page2";
         document.body.classList.remove("shake");
+        const windowHeight = window.innerHeight;
+        window.scrollTo(0, windowHeight);
     }, 2000)
 });
 
